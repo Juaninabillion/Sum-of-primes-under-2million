@@ -1,0 +1,33 @@
+<html>
+<body>
+<script>
+var holder = [];
+var answer =0;
+var lim = 2000000;
+
+for (var i =2; i<=lim;i++){
+	holder[i] = i;
+}
+
+
+/*
+for (var i =2; i< holder.length;i++){
+  	console.log(holder[i])
+}*/
+
+for (var i =2; i<Math.sqrt(lim);i++){
+		if(holder[(i)]==0){
+    continue;}
+    else{
+	for(var j = (i*2); j<holder.length;j+=i){
+      holder[j] = 0;
+    }
+  }
+  }
+for (var i =2; i< holder.length;i++){
+    answer += holder[i]
+}
+alert(answer);
+</script>
+</body>
+</html>
